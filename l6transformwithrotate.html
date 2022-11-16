@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transform with Rotate</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			background: grey;
+		}
+
+		.container .move{
+			width: 150px;
+			height: 60px;
+			background: red;
+			color: #fff;
+			font-size: 20px;
+			margin: 20px 0;
+
+			text-align: center;
+			line-height: 60px;
+		}
+
+		#rotate:hover{
+			/*rotate(angle)*/
+			/*transform: rotate(45deg);*/
+			/*transform: rotate(-45deg);*/
+			/*transform: rotate(90deg);*/
+			transform: rotate(180deg);
+		}
+
+		#rotatex:hover{
+			/*rotatex(angle)*/
+			/*transform: rotateX(45deg);*/
+			/*transform: rotateX(-45deg);*/
+			transform: rotateX(90deg);
+		}
+
+		#rotatey:hover{
+			/*rotateY(angle)*/
+			/*transform: rotateY(45deg);*/
+	        /*transform: rotateY(-45deg);*/
+	        transform: rotateY(90deg);
+		}
+
+		img{
+			width: 300px;
+
+			display: block;
+			margin: auto;
+
+			transition: transform 2s;
+		}
+
+		img:hover{
+			/*transform: rotate(45deg);*/
+			/*transform: rotate(90deg);*/
+			/*transform: rotate(180deg);*/
+			/*transform: rotate(360deg);*/
+
+			/*transform: rotate(-45deg);*/
+
+			/*1turn = 360deg*/
+			/*transform: rotate(1turn);*/
+			/*transform: rotate(-1.5turn);*/
+			/*transform: rotate(-0.5turn);*/
+            
+            /*400grad = 360deg*/
+			/*transform: rotate(400grad);*/
+			/*transform: rotate(-200grad);*/
+
+			transform: rotateX(45deg);
+
+			transform: rotateY(45deg);
+
+
+		}
+
+		.div1{
+			width: 100px;
+			height: 200px;
+			background: pink;
+			border: 1px solid black;
+
+			transform: rotate(-45deg);
+
+			transition: transform 1s;
+		}
+
+		.div1:hover{
+			transform: rotate(0);
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="rotate" class="move">Rotete Me</div>
+	</div>
+
+	<div class="container">
+		<div id="rotatex" class="move">Rotete X</div>
+	</div>
+
+	<div class="container">
+		<div id="rotatey" class="move">Rotete Y</div>
+	</div>
+
+	<img src="./img/dog.jpeg">
+
+
+	<div class="div1">DIV1</div>
+
+</body>
+</html>

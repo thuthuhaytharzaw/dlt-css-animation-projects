@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Keyframe</title>
+	<style type="text/css">
+
+		body{
+			padding: 0;
+			margin: 0;
+		}
+
+		.box1{
+			width: 150px;
+			height: 150px;
+			background-color: steelblue;
+
+			/*animation-name: myani;*/
+			/*animation-duration: 3s;*/
+
+			/*animation-fill-mode: backwards;*/
+			animation-fill-mode: forwards;
+
+			animation-delay: 3s;
+		}
+
+		.box2{
+			width: 150px;
+			height: 150px;
+			background-color: orange;
+		}
+
+		@keyframes myani{
+			0%{
+				transform: translate(0px);
+			}
+
+			50%{
+				transform: translateX(800px);
+			}
+
+			100%{
+				transform: translateX(800px) translateY(800px);
+			}
+		}
+		
+	</style>
+</head>
+<body>
+
+	<div class="box1"></div>
+
+	<hr/>
+
+	<div class="box2"></div>
+
+</body>
+</html>
